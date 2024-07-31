@@ -90,7 +90,7 @@ const PDF: React.FC<{ data: any }> = ({ data }) => {
                                 <span>{c.startDate || "Start Date"} - {c.endDate || "End Date"}</span>
                             </div>
                             <p className="text-sm mt-2 text-gray-700">{c.description || "Description of responsibilities and achievements."}</p>
-                            <hr />
+
                         </div>
                     ))}
                 </section>
@@ -104,7 +104,7 @@ const PDF: React.FC<{ data: any }> = ({ data }) => {
                                 <span className="text-gray-700 font-semibold">{d.degree || "Degree"}</span>
                                 <span className="text-gray-700">{d.startDate || "Start Date"} - {d.endDate || "End Date"}</span>
                             </div>
-                            <hr />
+
                         </div>
                     ))}
                 </section>
