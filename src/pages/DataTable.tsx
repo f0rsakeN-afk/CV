@@ -11,9 +11,10 @@ import { setPDFData } from "../store/pdfSlice";
 const DataTable = () => {
     const dispatch = useDispatch();
     const { register, handleSubmit, control, formState: { errors } } = useForm<FormData>();
+
     const [personalOpen, setPersonalOpen] = useState<boolean>(true);
-    const [experienceOpen, setExperienceOpen] = useState<boolean>(false);
-    const [educationOpen, setEducationOpen] = useState<boolean>(false);
+    const [experienceOpen, setExperienceOpen] = useState<boolean>(true);
+    const [educationOpen, setEducationOpen] = useState<boolean>(true);
 
 
 
@@ -33,6 +34,8 @@ const DataTable = () => {
         // console.log(data);
         dispatch(setPDFData(data));
     };
+
+
 
     return (
         <div className="p-4 bg-white shadow-md rounded-md  ">
