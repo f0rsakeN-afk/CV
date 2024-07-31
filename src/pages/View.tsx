@@ -1,10 +1,16 @@
-import React from 'react'
+import { RootState } from "../store/store"
+import { useSelector } from "react-redux"
+import PDF from "./PDF";
 
-type Props = {}
 
-const View = (props: Props) => {
+
+const View = () => {
+  const pdfData = useSelector((state: RootState) => state.pdfData.data);
+  console.log(pdfData);
   return (
-    <div>View</div>
+    <div>
+      {pdfData ? <PDF data={pdfData} /> : <p>No data available for display</p>}
+    </div>
   )
 }
 

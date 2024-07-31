@@ -1,12 +1,26 @@
-export interface dataTypes {
+// utils/DataType.ts
+export interface Experience {
+  companyName?: string;
+  position?: string;
+  startDate?: string;
+  endDate?: string;
+  description?: string;
+}
+
+export interface Education {
+  schoolName?: string;
+  degree?: string;
+  country?: string;
+  startDate?: string;
+  endDate?: string;
+}
+
+export interface FormData {
   fullName: string;
   email: string;
-  phoneNumber: number;
+  phoneNumber: string;
   address: string;
   summary: string;
-  companyName: string;
-  position: string;
-  startDate: Date;
-  endDate: Date;
-  description: string;
+  experience: Experience[];
+  education: Education[];
 }
