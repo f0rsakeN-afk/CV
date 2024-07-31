@@ -96,12 +96,12 @@ const PDF: React.FC<{ data: any }> = ({ data }) => {
 
                 <section className="mt-6">
                     <Title text="Education" />
-                    {data?.education?.map((e, index: number) => (
+                    {data?.education?.map((d, index: number) => (
                         <div className="pb-4" key={index}>
-                            <h3 className="font-semibold text-xl">{e.schoolName || "School Name"}</h3>
+                            <h3 className="font-semibold text-xl">{d.schoolName || "School Name"}</h3>
                             <div className="flex justify-between text-sm mt-1">
-                                <span className="text-gray-700 font-semibold">{e.degree || "Degree"}</span>
-                                <span className="text-gray-700">{e.startDate || "Start Date"} - {e.endDate || "End Date"}</span>
+                                <span className="text-gray-700 font-semibold">{d.degree || "Degree"}</span>
+                                <span className="text-gray-700">{d.startDate || "Start Date"} - {d.endDate || "End Date"}</span>
                             </div>
                             <hr />
                         </div>
