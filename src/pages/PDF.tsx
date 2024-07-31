@@ -4,6 +4,7 @@ import html2canvas from 'html2canvas';
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlinePhoneInTalk, MdEmail } from "react-icons/md";
 import Title from "../components/Title";
+import { Education, Experience } from '../utils/DataType';
 
 const PDF: React.FC<{ data: any }> = ({ data }) => {
     const handleDownload = () => {
@@ -81,7 +82,7 @@ const PDF: React.FC<{ data: any }> = ({ data }) => {
 
                 <section className="mt-6">
                     <Title text="Experience" />
-                    {data?.experience?.map((c, index: number) => (
+                    {data?.experience?.map((c: Experience, index: number) => (
                         <div className="pb-4 " key={index}>
                             <h3 className="font-semibold text-xl">{c.companyName || "Company Name"}</h3>
                             <div className="flex justify-between text-sm mt-1">
@@ -96,7 +97,7 @@ const PDF: React.FC<{ data: any }> = ({ data }) => {
 
                 <section className="mt-6">
                     <Title text="Education" />
-                    {data?.education?.map((d, index: number) => (
+                    {data?.education?.map((d: Education, index: number) => (
                         <div className="pb-4" key={index}>
                             <h3 className="font-semibold text-xl">{d.schoolName || "School Name"}</h3>
                             <div className="flex justify-between text-sm mt-1">
